@@ -82,4 +82,40 @@ def approach_2(s, t):
 
     return len(freq) == 0
 
+# ===================================================
+# Approach 3: Frequency Array
+# ===================================================
+#
+# Idea:
+# 1. If lengths are different, return False.
+# 2. Create a frequency array of size 26.
+# 3. Increment counts using characters from s.
+# 4. Decrement counts using characters from t.
+# 5. If all counts are zero, the strings are anagrams.
+#
+# Time Complexity : O(n)
+#
+# Space Complexity: O(1)
+#
+# Note:
+# Works only for lowercase English letters.
+#
+# ===================================================
+
+def approach_3(s, t):
+
+    if len(s) != len(t):
+        return False
+
+    count = [0] * 26
+
+    for ch in s:
+        index = ord(ch) - ord('a')
+        count[index] += 1
+
+    for ch in t:
+        index = ord(ch) - ord('a')
+        count[index] -= 1
+
+    return all(value == 0 for value in count)
 
