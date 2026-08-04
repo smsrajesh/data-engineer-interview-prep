@@ -100,3 +100,72 @@ def approach_2(strs):
         groups[key].append(word)
 
     return list(groups.values())
+
+
+# ===================================================
+# Test Cases
+# ===================================================
+
+# Test Case 1
+
+strs = ["eat", "tea", "tan", "ate", "nat", "bat"]
+
+print(approach_1(strs))
+print(approach_2(strs))
+
+
+# Test Case 2
+
+strs = [""]
+
+print(approach_1(strs))
+print(approach_2(strs))
+
+
+# Test Case 3
+
+strs = ["a"]
+
+print(approach_1(strs))
+print(approach_2(strs))
+
+
+# ===================================================
+# Interview Notes
+# ===================================================
+#
+# ✔ Two strings are anagrams if they contain the same
+#   characters with the same frequency.
+#
+# ✔ Sorting creates a canonical representation of every
+#   anagram group.
+#
+# ✔ Frequency count avoids sorting and gives O(n × k)
+#   time complexity.
+#
+# ✔ Lists are mutable and not hashable, so convert the
+#   frequency array to a tuple before using it as a
+#   dictionary key.
+#
+# ✔ Sorting works for any character set (Unicode,
+#   uppercase, digits, special characters), whereas the
+#   frequency-array approach is limited to lowercase
+#   English letters.
+#
+# ===================================================
+# Approach Comparison
+# ===================================================
+#
+# Approach             Time            Space
+# ------------------------------------------------
+# Sorting              O(n × klogk)   O(n × k)
+# Frequency Count      O(n × k)       O(n × k)
+#
+# Best Choice
+#
+# ✔ Lowercase English letters
+#     → Frequency Count
+#
+# ✔ Any character set
+#     → Sorting
+#
