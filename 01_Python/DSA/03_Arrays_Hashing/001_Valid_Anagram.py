@@ -119,3 +119,66 @@ def approach_3(s, t):
 
     return all(value == 0 for value in count)
 
+
+# ===================================================
+# Test Cases
+# ===================================================
+
+# Test Case 1
+s = "eat"
+t = "tea"
+
+print(approach_1(s, t))
+print(approach_2(s, t))
+print(approach_3(s, t))
+
+
+# Test Case 2
+s = "rat"
+t = "car"
+
+print(approach_1(s, t))
+print(approach_2(s, t))
+print(approach_3(s, t))
+
+
+# Test Case 3
+s = "anagram"
+t = "nagaram"
+
+print(approach_1(s, t))
+print(approach_2(s, t))
+print(approach_3(s, t))
+
+
+# ===================================================
+# Interview Notes
+# ===================================================
+#
+# ✔ Brute Force: Sort both strings and compare.
+#
+# ✔ Hash Map: Count character frequencies and compare.
+#
+# ✔ Frequency Array: Best for lowercase English letters.
+#
+# ✔ Tuple is hashable; list is not hashable.
+#
+# ✔ Sorting works for any character set, while the
+#   frequency array is limited to lowercase English letters.
+#
+# ✔ Follow-up:
+#   - Unicode characters → Use sorting or HashMap.
+#   - Lowercase English letters only → Frequency array.
+
+
+# ===================================================
+# Approach Comparison
+# ===================================================
+#
+# Approach         Time        Space      Best Use Case
+# ----------------------------------------------------
+# Sorting          O(nlogn)    O(n)       Any characters
+# HashMap          O(n)        O(n)       General purpose
+# Frequency Array  O(n)        O(1)       Lowercase letters only
+#
+
