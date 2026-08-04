@@ -57,3 +57,41 @@ def approach_1(nums, target):
                 return [i, j]
 
     return []
+
+
+# ===================================================
+# Approach 2: Hash Map (Optimal)
+# ===================================================
+#
+# Idea:
+# 1. Create an empty HashMap.
+# 2. Traverse the array once.
+# 3. Calculate the complement:
+#
+#       complement = target - current number
+#
+# 4. If the complement already exists,
+#    return the stored index and current index.
+# 5. Otherwise, store the current number
+#    and its index in the HashMap.
+#
+# Time Complexity : O(n)
+#
+# Space Complexity: O(n)
+#
+# ===================================================
+
+def approach_2(nums, target):
+
+    hashmap = {}
+
+    for index, num in enumerate(nums):
+
+        complement = target - num
+
+        if complement in hashmap:
+            return [hashmap[complement], index]
+
+        hashmap[num] = index
+
+    return []
