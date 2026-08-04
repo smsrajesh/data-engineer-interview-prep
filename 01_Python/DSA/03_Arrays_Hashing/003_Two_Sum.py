@@ -132,3 +132,162 @@ def approach_3(nums, target):
                 result.append([i, j])
 
     return result
+
+
+# ===================================================
+# Test Cases
+# ===================================================
+
+# Test Case 1
+#
+# Input:
+# nums = [2,7,11,15]
+# target = 9
+#
+# Output:
+# Approach 1 -> [0,1]
+# Approach 2 -> [0,1]
+# Approach 3 -> [[0,1]]
+
+nums = [2,7,11,15]
+target = 9
+
+print(approach_1(nums, target))
+print(approach_2(nums, target))
+print(approach_3(nums, target))
+
+
+# Test Case 2
+#
+# Input:
+# nums = [3,2,4]
+# target = 6
+#
+# Output:
+# Approach 1 -> [1,2]
+# Approach 2 -> [1,2]
+# Approach 3 -> [[1,2]]
+
+nums = [3,2,4]
+target = 6
+
+print(approach_1(nums, target))
+print(approach_2(nums, target))
+print(approach_3(nums, target))
+
+
+# Test Case 3
+#
+# Input:
+# nums = [3,3]
+# target = 6
+#
+# Output:
+# Approach 1 -> [0,1]
+# Approach 2 -> [0,1]
+# Approach 3 -> [[0,1]]
+
+nums = [3,3]
+target = 6
+
+print(approach_1(nums, target))
+print(approach_2(nums, target))
+print(approach_3(nums, target))
+
+
+# Test Case 4
+#
+# Input:
+# nums = [-3,4,3,90]
+# target = 0
+#
+# Output:
+# Approach 1 -> [0,2]
+# Approach 2 -> [0,2]
+# Approach 3 -> [[0,2]]
+
+nums = [-3,4,3,90]
+target = 0
+
+print(approach_1(nums, target))
+print(approach_2(nums, target))
+print(approach_3(nums, target))
+
+
+# Test Case 5
+#
+# Input:
+# nums = [1,2,3,4,5]
+# target = 6
+#
+# Output:
+# Approach 3 -> [[0,4],[1,3]]
+
+nums = [1,2,3,4,5]
+target = 6
+
+print(approach_3(nums, target))
+
+
+# Test Case 6
+#
+# Input:
+# nums = [3,3,3]
+# target = 6
+#
+# Output:
+# Approach 3 -> [[0,1],[0,2],[1,2]]
+
+nums = [3,3,3]
+target = 6
+
+print(approach_3(nums, target))
+
+
+# ===================================================
+# Interview Notes
+# ===================================================
+#
+# ✔ Brute Force:
+#   Compare every possible pair until the target
+#   is found.
+#
+# ✔ Hash Map:
+#   Store each number along with its index.
+#
+# ✔ Instead of searching through the array,
+#   calculate the complement:
+#
+#       complement = target - current_number
+#
+# ✔ HashMap lookup is O(1), reducing the overall
+#   time complexity to O(n).
+#
+# ✔ The original LeetCode problem guarantees
+#   exactly one valid pair.
+#
+# ✔ If the interviewer asks to return all
+#   possible index pairs, continue searching
+#   instead of returning immediately.
+#
+# ✔ Returning all pairs has a worst-case
+#   time complexity of O(n²), since the output
+#   itself can contain O(n²) pairs.
+#
+# ✔ Follow-up:
+#   - Return all possible index pairs.
+#   - Return all unique value pairs.
+#   - Solve for a sorted array (Two Sum II).
+#   - Solve without extra space.
+#
+
+# ===================================================
+# Approach Comparison
+# ===================================================
+#
+# Approach                    Time      Space      Best Use Case
+# ----------------------------------------------------------------
+# Brute Force                 O(n²)     O(1)       Simple solution
+# HashMap                     O(n)      O(n)       Interview Optimal
+# All Possible Index Pairs    O(n²)     O(k)       Interview Follow-up
+#
