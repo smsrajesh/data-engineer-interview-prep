@@ -44,3 +44,42 @@ def approach_1(s, t):
     if len(s)!=len(t):
         return False
     return sorted(s) == sorted(t)
+
+
+# ===================================================
+# Approach 2: Hash Map (Frequency Dictionary)
+# ===================================================
+#
+# Idea:
+# 1. Count the frequency of every character in s.
+# 2. Traverse t and decrement the frequency.
+# 3. If a character is missing, return False.
+# 4. Remove characters whose count becomes zero.
+# 5. If the dictionary becomes empty, return True.
+#
+# Time Complexity : O(n)
+#
+# Space Complexity: O(n)
+#
+# ===================================================
+
+def approach_2(s, t):
+
+    freq = {}
+
+    for ch in s:
+        freq[ch] = freq.get(ch, 0) + 1
+
+    for ch in t:
+
+        if ch not in freq:
+            return False
+
+        freq[ch] -= 1
+
+        if freq[ch] == 0:
+            del freq[ch]
+
+    return len(freq) == 0
+
+
