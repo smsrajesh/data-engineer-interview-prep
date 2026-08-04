@@ -95,3 +95,40 @@ def approach_2(nums, target):
         hashmap[num] = index
 
     return []
+
+
+# ===================================================
+# Approach 3: Brute Force (All Possible Index Pairs)
+# ===================================================
+#
+# Idea:
+# 1. Traverse every element in the array.
+# 2. Compare it with every remaining element.
+# 3. If their sum equals the target,
+#    store the pair of indices.
+# 4. Continue until every possible pair
+#    has been checked.
+#
+# Time Complexity : O(n²)
+#
+# Space Complexity: O(k)
+#
+# where k = number of valid pairs.
+#
+# ===================================================
+
+def approach_3(nums, target):
+
+    result = []
+
+    n = len(nums)
+
+    for i in range(n):
+
+        for j in range(i + 1, n):
+
+            if nums[i] + nums[j] == target:
+
+                result.append([i, j])
+
+    return result
