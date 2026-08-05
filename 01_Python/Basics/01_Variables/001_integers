@@ -1,13 +1,15 @@
 # ===================================================
-# Integers
-# Category: Programming Fundamentals
+# Topic: Integers
+# Category: Python Basics
 # ===================================================
+
+# 1. Introduction
 
 ## What is an Integer?
 
-An integer is a whole number without a decimal point.
+An integer is a whole number without a decimal point. It can be positive, negative, or zero.
 
-Examples
+### Examples
 
 ```text
 -100
@@ -18,7 +20,7 @@ Examples
 999999
 ```
 
-Not Integers
+### Not Integers
 
 ```text
 3.14
@@ -28,11 +30,48 @@ Not Integers
 
 ---
 
-# Types of Integers
+# 2. Characteristics
+
+- Whole numbers (no decimal point)
+- Immutable
+- Supports arithmetic operations
+- Supports comparison operations
+- Can be positive, negative, or zero
+- Python integers have arbitrary precision (no fixed size)
+
+---
+
+# 3. Syntax
+
+## Creating Integers
+
+```python
+a = 10
+b = -25
+c = 0
+```
+
+Check type
+
+```python
+type(a)
+```
+
+Output
+
+```python
+<class 'int'>
+```
+
+---
+
+# 4. Types
 
 ## Positive Integer
 
 Greater than zero.
+
+Examples
 
 ```text
 1
@@ -46,6 +85,8 @@ Greater than zero.
 ## Negative Integer
 
 Less than zero.
+
+Examples
 
 ```text
 -1
@@ -65,11 +106,9 @@ Zero is neither positive nor negative.
 
 ---
 
-# Even Numbers
+## Even Numbers
 
 A number divisible by 2.
-
-Condition
 
 ```python
 num % 2 == 0
@@ -87,11 +126,9 @@ Examples
 
 ---
 
-# Odd Numbers
+## Odd Numbers
 
 A number not divisible by 2.
-
-Condition
 
 ```python
 num % 2 != 0
@@ -109,7 +146,7 @@ Examples
 
 ---
 
-# Prime Numbers
+## Prime Numbers
 
 A number greater than 1 having exactly two factors.
 
@@ -142,7 +179,7 @@ Not Prime
 
 ---
 
-# Composite Numbers
+## Composite Numbers
 
 A number greater than 1 having more than two factors.
 
@@ -160,9 +197,66 @@ Examples
 
 ---
 
-# Factors (Divisors)
+# 5. Internal Working
 
-Factors are numbers that divide a number exactly.
+## Python Integer Object
+
+Python stores integers as immutable objects.
+
+```python
+a = 10
+b = a
+
+b = 20
+```
+
+Output
+
+```text
+a = 10
+b = 20
+```
+
+Changing `b` does not modify `a`.
+
+---
+
+## Integer Precision
+
+Unlike Java or C++, Python integers have arbitrary precision.
+
+```python
+num = 999999999999999999999999999999999999
+```
+
+Python stores it correctly.
+
+---
+
+## Integer Caching
+
+Python caches small integers (typically from **-5 to 256**) for performance.
+
+Example
+
+```python
+a = 100
+b = 100
+
+a is b
+```
+
+Output
+
+```python
+True
+```
+
+---
+
+# 6. Examples
+
+## Factors
 
 Example
 
@@ -181,11 +275,7 @@ Factors
 
 ---
 
-# Multiples
-
-Multiples are obtained by multiplying a number by integers.
-
-Example
+## Multiples
 
 ```text
 Number = 5
@@ -202,7 +292,7 @@ Multiples
 
 ---
 
-# Divisibility Rules
+## Divisibility Rules
 
 | Number | Rule |
 |---------|------|
@@ -217,11 +307,7 @@ Multiples
 
 ---
 
-# Absolute Value
-
-Distance from zero.
-
-Python
+## Absolute Value
 
 ```python
 abs(-15)
@@ -235,9 +321,7 @@ Output
 
 ---
 
-# Integer Division
-
-Python
+## Integer Division
 
 ```python
 7 // 2
@@ -251,11 +335,7 @@ Output
 
 ---
 
-# Modulus
-
-Returns remainder.
-
-Python
+## Modulus
 
 ```python
 7 % 2
@@ -269,9 +349,7 @@ Output
 
 ---
 
-# Quotient and Remainder
-
-Example
+## Quotient and Remainder
 
 ```text
 17 ÷ 5
@@ -280,8 +358,6 @@ Quotient = 3
 Remainder = 2
 ```
 
-Python
-
 ```python
 17 // 5
 17 % 5
@@ -289,9 +365,7 @@ Python
 
 ---
 
-# Reverse an Integer
-
-Example
+## Reverse an Integer
 
 ```text
 12345
@@ -301,16 +375,9 @@ Example
 54321
 ```
 
-Used in
-
-- Reverse Integer
-- Palindrome Number
-
 ---
 
-# Palindrome Integer
-
-Reads the same forwards and backwards.
+## Palindrome Integer
 
 Examples
 
@@ -329,9 +396,7 @@ Not Palindrome
 
 ---
 
-# Count Digits
-
-Example
+## Count Digits
 
 ```text
 98765
@@ -341,12 +406,10 @@ Digits = 5
 
 ---
 
-# Sum of Digits
-
-Example
+## Sum of Digits
 
 ```text
-Number = 5432
+5432
 
 5 + 4 + 3 + 2
 
@@ -355,9 +418,7 @@ Number = 5432
 
 ---
 
-# Product of Digits
-
-Example
+## Product of Digits
 
 ```text
 234
@@ -369,35 +430,27 @@ Example
 
 ---
 
-# Largest Digit
-
-Example
+## Largest Digit
 
 ```text
 539271
 
-Largest digit = 9
+Largest = 9
 ```
 
 ---
 
-# Smallest Digit
-
-Example
+## Smallest Digit
 
 ```text
 539271
 
-Smallest digit = 1
+Smallest = 1
 ```
 
 ---
 
-# Armstrong Number
-
-A number equal to the sum of each digit raised to the power of the number of digits.
-
-Example
+## Armstrong Number
 
 ```text
 153
@@ -409,11 +462,7 @@ Example
 
 ---
 
-# Perfect Number
-
-Sum of proper factors equals the number.
-
-Example
+## Perfect Number
 
 ```text
 6
@@ -424,40 +473,28 @@ Factors
 2
 3
 
-1+2+3=6
+1+2+3 = 6
 ```
 
 ---
 
-# GCD (Greatest Common Divisor)
-
-Largest common factor.
-
-Example
+## GCD
 
 ```text
 12
+
 18
-
-Factors
-
-12 → 1 2 3 4 6 12
-
-18 → 1 2 3 6 9 18
 
 GCD = 6
 ```
 
 ---
 
-# LCM (Least Common Multiple)
-
-Smallest common multiple.
-
-Example
+## LCM
 
 ```text
 6
+
 8
 
 LCM = 24
@@ -465,34 +502,23 @@ LCM = 24
 
 ---
 
-# Power
-
-Example
-
-```text
-2³ = 8
-5² = 25
-```
-
-Python
+## Power
 
 ```python
 2 ** 3
+
 pow(2,3)
+```
+
+Output
+
+```text
+8
 ```
 
 ---
 
-# Square Root
-
-Example
-
-```text
-√25 = 5
-√81 = 9
-```
-
-Python
+## Square Root
 
 ```python
 import math
@@ -500,27 +526,60 @@ import math
 math.sqrt(25)
 ```
 
----
-
-# Integer Limits
-
-Python integers have arbitrary precision.
-
-In Java
+Output
 
 ```text
-int
-
--2,147,483,648
-
-to
-
-2,147,483,647
+5
 ```
 
 ---
 
-# Common Interview Questions
+# 7. Common Methods / Operations
+
+| Operation | Example |
+|-----------|---------|
+| Addition | `a + b` |
+| Subtraction | `a - b` |
+| Multiplication | `a * b` |
+| Division | `a / b` |
+| Integer Division | `a // b` |
+| Modulus | `a % b` |
+| Power | `a ** b` |
+| Absolute | `abs(a)` |
+| Maximum | `max(a,b)` |
+| Minimum | `min(a,b)` |
+| Round | `round(x)` |
+
+---
+
+# 8. Time Complexity
+
+| Operation | Complexity |
+|-----------|------------|
+| Addition | O(1) |
+| Subtraction | O(1) |
+| Multiplication | O(1) |
+| Division | O(1) |
+| Modulus | O(1) |
+| Comparison | O(1) |
+| Reverse Integer | O(log₁₀ n) |
+| Count Digits | O(log₁₀ n) |
+| Sum of Digits | O(log₁₀ n) |
+| Prime Check | O(√n) |
+| GCD (Euclidean) | O(log(min(a,b))) |
+
+---
+
+# 9. Memory Considerations
+
+- Integers are immutable.
+- Python caches small integers (-5 to 256).
+- Python integers automatically expand to accommodate large values.
+- Larger integers consume more memory than smaller ones.
+
+---
+
+# 10. Common Interview Questions
 
 - Reverse Integer
 - Palindrome Number
@@ -541,52 +600,89 @@ to
 
 ---
 
-# Frequently Used Operations
+# 11. Common Mistakes
+
+### Using `/` instead of `//`
 
 ```python
-num % 10      # Last digit
+7 / 2
+```
 
-num // 10     # Remove last digit
+Output
 
-abs(num)      # Absolute value
+```text
+3.5
+```
 
-num % 2 == 0  # Even
+Correct
 
-num % 2 != 0  # Odd
+```python
+7 // 2
+```
 
-pow(a,b)
+Output
 
-a ** b
-
-max(a,b)
-
-min(a,b)
+```text
+3
 ```
 
 ---
 
-# Complexity Reference
+### Negative Modulus
 
-| Operation | Time |
-|-----------|------|
-| Addition | O(1) |
-| Subtraction | O(1) |
-| Multiplication | O(1) |
-| Division | O(1) |
-| Modulus | O(1) |
-| Compare | O(1) |
-| Reverse Integer | O(log₁₀ n) |
-| Count Digits | O(log₁₀ n) |
-| Sum of Digits | O(log₁₀ n) |
-| Prime Check | O(√n) |
-| GCD (Euclidean Algorithm) | O(log(min(a,b))) |
+```python
+-5 % 2
+```
+
+Output
+
+```text
+1
+```
+
+Python's behavior may differ from some other programming languages.
 
 ---
 
-# Interview Tips
+### Assuming Integers Overflow
 
-- Use `% 10` to extract the last digit.
-- Use `// 10` to remove the last digit.
-- Check for integer overflow when the language has fixed-size integers (e.g., Java, C++).
-- Prefer the Euclidean algorithm for GCD instead of checking every factor.
-- Distinguish **prime**, **composite**, **even**, and **odd** numbers—they are tested frequently.
+Unlike Java and C++, Python integers do not overflow under normal circumstances.
+
+---
+
+# 12. Best Practices
+
+- Use descriptive variable names.
+- Use `//` for integer division.
+- Prefer the Euclidean algorithm for GCD.
+- Use `% 10` and `// 10` for digit manipulation.
+- Avoid unnecessary type conversions.
+- Consider edge cases such as `0`, negative values, and very large integers.
+
+---
+
+# 13. Cheat Sheet
+
+| Task | Code |
+|------|------|
+| Last Digit | `n % 10` |
+| Remove Last Digit | `n // 10` |
+| Even | `n % 2 == 0` |
+| Odd | `n % 2 != 0` |
+| Absolute Value | `abs(n)` |
+| Power | `n ** p` |
+| Integer Division | `a // b` |
+| Remainder | `a % b` |
+| Maximum | `max(a, b)` |
+| Minimum | `min(a, b)` |
+| Square Root | `math.sqrt(n)` |
+
+---
+
+# Revision Summary
+
+- Integers are immutable.
+- Python integers have arbitrary precision.
+- Use `%` for remainders and `//` for integer division.
+- Learn digit manipulation (`% 10` and `// 10`).
+- Understand prime numbers, GCD, LCM, and common integer-based interview problems.
