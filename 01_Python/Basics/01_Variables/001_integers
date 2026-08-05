@@ -1,0 +1,592 @@
+# ===================================================
+# Integers
+# Category: Programming Fundamentals
+# ===================================================
+
+## What is an Integer?
+
+An integer is a whole number without a decimal point.
+
+Examples
+
+```text
+-100
+-5
+0
+7
+42
+999999
+```
+
+Not Integers
+
+```text
+3.14
+5.5
+-2.7
+```
+
+---
+
+# Types of Integers
+
+## Positive Integer
+
+Greater than zero.
+
+```text
+1
+2
+100
+999
+```
+
+---
+
+## Negative Integer
+
+Less than zero.
+
+```text
+-1
+-50
+-999
+```
+
+---
+
+## Zero
+
+```text
+0
+```
+
+Zero is neither positive nor negative.
+
+---
+
+# Even Numbers
+
+A number divisible by 2.
+
+Condition
+
+```python
+num % 2 == 0
+```
+
+Examples
+
+```text
+2
+4
+6
+8
+10
+```
+
+---
+
+# Odd Numbers
+
+A number not divisible by 2.
+
+Condition
+
+```python
+num % 2 != 0
+```
+
+Examples
+
+```text
+1
+3
+5
+7
+9
+```
+
+---
+
+# Prime Numbers
+
+A number greater than 1 having exactly two factors.
+
+- 1
+- Itself
+
+Examples
+
+```text
+2
+3
+5
+7
+11
+13
+17
+19
+```
+
+Not Prime
+
+```text
+4
+6
+8
+9
+10
+12
+```
+
+---
+
+# Composite Numbers
+
+A number greater than 1 having more than two factors.
+
+Examples
+
+```text
+4
+6
+8
+9
+10
+12
+15
+```
+
+---
+
+# Factors (Divisors)
+
+Factors are numbers that divide a number exactly.
+
+Example
+
+```text
+Number = 12
+
+Factors
+
+1
+2
+3
+4
+6
+12
+```
+
+---
+
+# Multiples
+
+Multiples are obtained by multiplying a number by integers.
+
+Example
+
+```text
+Number = 5
+
+Multiples
+
+5
+10
+15
+20
+25
+30
+```
+
+---
+
+# Divisibility Rules
+
+| Number | Rule |
+|---------|------|
+| 2 | Last digit is even |
+| 3 | Sum of digits divisible by 3 |
+| 4 | Last two digits divisible by 4 |
+| 5 | Ends with 0 or 5 |
+| 6 | Divisible by both 2 and 3 |
+| 8 | Last three digits divisible by 8 |
+| 9 | Sum of digits divisible by 9 |
+| 10 | Ends with 0 |
+
+---
+
+# Absolute Value
+
+Distance from zero.
+
+Python
+
+```python
+abs(-15)
+```
+
+Output
+
+```text
+15
+```
+
+---
+
+# Integer Division
+
+Python
+
+```python
+7 // 2
+```
+
+Output
+
+```text
+3
+```
+
+---
+
+# Modulus
+
+Returns remainder.
+
+Python
+
+```python
+7 % 2
+```
+
+Output
+
+```text
+1
+```
+
+---
+
+# Quotient and Remainder
+
+Example
+
+```text
+17 ÷ 5
+
+Quotient = 3
+Remainder = 2
+```
+
+Python
+
+```python
+17 // 5
+17 % 5
+```
+
+---
+
+# Reverse an Integer
+
+Example
+
+```text
+12345
+
+↓
+
+54321
+```
+
+Used in
+
+- Reverse Integer
+- Palindrome Number
+
+---
+
+# Palindrome Integer
+
+Reads the same forwards and backwards.
+
+Examples
+
+```text
+121
+1331
+1221
+```
+
+Not Palindrome
+
+```text
+123
+154
+```
+
+---
+
+# Count Digits
+
+Example
+
+```text
+98765
+
+Digits = 5
+```
+
+---
+
+# Sum of Digits
+
+Example
+
+```text
+Number = 5432
+
+5 + 4 + 3 + 2
+
+=14
+```
+
+---
+
+# Product of Digits
+
+Example
+
+```text
+234
+
+2 × 3 × 4
+
+=24
+```
+
+---
+
+# Largest Digit
+
+Example
+
+```text
+539271
+
+Largest digit = 9
+```
+
+---
+
+# Smallest Digit
+
+Example
+
+```text
+539271
+
+Smallest digit = 1
+```
+
+---
+
+# Armstrong Number
+
+A number equal to the sum of each digit raised to the power of the number of digits.
+
+Example
+
+```text
+153
+
+1³ + 5³ + 3³
+
+=153
+```
+
+---
+
+# Perfect Number
+
+Sum of proper factors equals the number.
+
+Example
+
+```text
+6
+
+Factors
+
+1
+2
+3
+
+1+2+3=6
+```
+
+---
+
+# GCD (Greatest Common Divisor)
+
+Largest common factor.
+
+Example
+
+```text
+12
+18
+
+Factors
+
+12 → 1 2 3 4 6 12
+
+18 → 1 2 3 6 9 18
+
+GCD = 6
+```
+
+---
+
+# LCM (Least Common Multiple)
+
+Smallest common multiple.
+
+Example
+
+```text
+6
+8
+
+LCM = 24
+```
+
+---
+
+# Power
+
+Example
+
+```text
+2³ = 8
+5² = 25
+```
+
+Python
+
+```python
+2 ** 3
+pow(2,3)
+```
+
+---
+
+# Square Root
+
+Example
+
+```text
+√25 = 5
+√81 = 9
+```
+
+Python
+
+```python
+import math
+
+math.sqrt(25)
+```
+
+---
+
+# Integer Limits
+
+Python integers have arbitrary precision.
+
+In Java
+
+```text
+int
+
+-2,147,483,648
+
+to
+
+2,147,483,647
+```
+
+---
+
+# Common Interview Questions
+
+- Reverse Integer
+- Palindrome Number
+- Count Digits
+- Sum of Digits
+- Product of Digits
+- Prime Number
+- Armstrong Number
+- Perfect Number
+- GCD
+- LCM
+- Power Function
+- Happy Number
+- Plus One
+- Add Digits
+- Integer to Roman
+- Roman to Integer
+
+---
+
+# Frequently Used Operations
+
+```python
+num % 10      # Last digit
+
+num // 10     # Remove last digit
+
+abs(num)      # Absolute value
+
+num % 2 == 0  # Even
+
+num % 2 != 0  # Odd
+
+pow(a,b)
+
+a ** b
+
+max(a,b)
+
+min(a,b)
+```
+
+---
+
+# Complexity Reference
+
+| Operation | Time |
+|-----------|------|
+| Addition | O(1) |
+| Subtraction | O(1) |
+| Multiplication | O(1) |
+| Division | O(1) |
+| Modulus | O(1) |
+| Compare | O(1) |
+| Reverse Integer | O(log₁₀ n) |
+| Count Digits | O(log₁₀ n) |
+| Sum of Digits | O(log₁₀ n) |
+| Prime Check | O(√n) |
+| GCD (Euclidean Algorithm) | O(log(min(a,b))) |
+
+---
+
+# Interview Tips
+
+- Use `% 10` to extract the last digit.
+- Use `// 10` to remove the last digit.
+- Check for integer overflow when the language has fixed-size integers (e.g., Java, C++).
+- Prefer the Euclidean algorithm for GCD instead of checking every factor.
+- Distinguish **prime**, **composite**, **even**, and **odd** numbers—they are tested frequently.
