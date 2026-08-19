@@ -21,14 +21,15 @@ Data Pipeline & Data Loading
 
 ---
 
-# Data Engineering Terminology
+# Data Engineering Terminology :
 
 > Quick-reference glossary for Data Engineer interview preparation.
+
 > Format: Meaning → Think → Connect
 
 ---
 
-## 1. Data Engineering Fundamentals
+## 1. Data Engineering Fundamentals :
 
 ### Data Pipeline
 
@@ -70,7 +71,7 @@ Data Pipeline & Data Loading
 
 ---
 
-## 2. Data Loading
+## 2. Data Loading :
 
 ### Batch Processing
 
@@ -122,7 +123,7 @@ Data Pipeline & Data Loading
 
 ---
 
-## 3. Data Transformation
+## 3. Data Transformation :
 
 ### Data Transformation
 
@@ -134,27 +135,30 @@ Data Pipeline & Data Loading
 
 ---
 
-## Key Connections
+## Key Connections :
 
 ### Pipeline Flow
 
-Source → Ingestion → Processing → Transformation → Target
+    Source → Ingestion → Processing → Transformation → Target
 
 ### Loading Strategy
 
-Full Load → Initial/Complete Load
+    Full Load → Initial/Complete Load
 
-Incremental Load → New/Changed Data
+    Incremental Load → New/Changed Data
 
 ### Incremental Processing
 
-CDC → Identify Changes  
-Watermark → Track Processing Boundary  
-Incremental Load → Process Delta  
-MERGE → Apply Changes
+    CDC → Identify Changes  
+
+    Watermark → Track Processing Boundary  
+
+    Incremental Load → Process Delta 
+
+    MERGE → Apply Changes
 
 ### ETL vs ELT
 
-ETL → Transform → Load
+    ETL → Transform → Load
 
-ELT → Load → Transform
+    ELT → Load → Transform
