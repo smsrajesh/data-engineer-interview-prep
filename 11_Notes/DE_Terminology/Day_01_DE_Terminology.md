@@ -162,3 +162,7 @@ Data Pipeline & Data Loading
     ETL → Transform → Load
 
     ELT → Load → Transform
+
+### Incremental Processing Connection
+
+**CDC identifies changes → Incremental Load processes those changes → Watermark tracks processing progress.**
